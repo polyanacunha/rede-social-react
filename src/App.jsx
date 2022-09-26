@@ -5,6 +5,47 @@ import { Sidebar } from "./components/Sidebar";
 import "./global.css";
 import styles from './App.module.css';
 
+//author:{avatar_url"",name: "", role:"" }
+//publishedAt:Date
+//content: string
+
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatarUrl:'https://github.com/diego3g.png',
+      name: 'Diego Fernandez',
+      role:'CTO Rocketseat'
+    },
+    content: [
+      {type: 'paragraph', content: 'Fala galeraa 👋 '},
+     
+      {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀</p> '},
+
+       {type:'link', content: '<a href=""> jane.design/doctorcare </a>'} ,
+
+    ],
+    publishedAt: new Date('2022-09-26 20:08:09'),
+  },
+  {
+    id: 2,
+    author: {
+      avatarUrl:'https://github.com/maykbrito.png',
+      name: 'Mayk Brito',
+      role:'Educator Rocketseat'
+    },
+    content: [
+      {type: 'paragraph', content: 'Fala galeraa 👋 '},
+     
+      {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀</p> '},
+
+       {type:'link', content: '<a href=""> jane.design/doctorcare </a>'} ,
+
+    ],
+    publishedAt: new Date('2022-09-25 20:08:09'),
+  },
+];
+
 
 export function App() {
   return (
@@ -16,15 +57,15 @@ export function App() {
        <Sidebar/>
 
         <main>
-        <Post 
-        author="Polyana Cunhaoi" 
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore laudantium nihil iusto ipsam tempora tenetur quia quaerat quisquam, illum facere, hic minus, temporibus obcaecati? Expedita neque possimus fugit vero autem."
-     />
+         {posts.map(post =>{
 
-    <Post 
-        author = "lívia antony"
-        content = "eh mt chata"
-      />
+         return (<Post
+         author={post.author}
+         content={post.content}
+         publishedAt={post.publishedAt}
+         />)
+          } )}
+ 
         </main>
       </div>
    
