@@ -22,7 +22,7 @@ const posts = [
      
       {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀</p> '},
 
-       {type:'link', content: '<a href=""> jane.design/doctorcare </a>'} ,
+       {type:'link', content: ' jane.design/doctorcare '} ,
 
     ],
     publishedAt: new Date('2022-09-26 20:08:09'),
@@ -64,7 +64,7 @@ export function App() {
          content={post.content}
          publishedAt={post.publishedAt}
          />)
-          } )}
+          } )};
  
         </main>
       </div>
