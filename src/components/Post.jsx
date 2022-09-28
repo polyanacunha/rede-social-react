@@ -6,9 +6,6 @@ import {Avatar} from './Avatar';
 import { Comment } from './comment';
 import styles from './Post.module.css';
 
-//estado = variaveis que eu quero que o componente monitore.
-
-
 export function Post({author, publishedAt, content}){
     const [comments, setComments] = useState(
         1,
